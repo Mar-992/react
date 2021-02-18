@@ -1,5 +1,5 @@
-import { func } from 'prop-types';
-import React,{useEffect, useState}  from 'react'
+// import { func } from 'prop-types';
+import React,{useState}  from 'react'
 import {Input} from './Input'
 
 export function Login(){
@@ -7,6 +7,7 @@ export function Login(){
     const [username,setUsername] = useState('');
     const [password,setPassword] = useState('');
     const [inputType,setInputType] = useState('password');
+    const [showComment, setShowComment] = useState(false);
 
     function setToggle(){
         setInputType(
@@ -43,8 +44,10 @@ export function Login(){
                         value={password}
                         onChange={(e)=>setPassword(e.target.value)  }
                         toggle={setToggle}
+                        showComment={showComment}
+                        toggleComment={()=>{setShowComment(!showComment)}}
                     />
-                    <button > 
+                    <button  className="action-button"> 
                         Sign In
                     </button>
             </form>
