@@ -24,5 +24,6 @@ export function Todos(props){
 
 Todos.propTypes={
     todoList: PropTypes.array.isRequired,
-    markTodoAsDone: PropTypes.func.isRequired
+    markTodoAsDone: PropTypes.func.isRequired,
+    deleteItem:PropTypes.func
 }

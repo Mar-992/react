@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {App} from './components/App'
-import './assets/css/index.css'
+import {BrowserRouter,Route} from 'react-router-dom'
 
 
 ReactDOM.render(
-
-  <App />,
+  <BrowserRouter>
+      <Nav />
+    <Route path="/" component={App} />
+  </BrowserRouter>,
   document.getElementById('root')
-);
+)
